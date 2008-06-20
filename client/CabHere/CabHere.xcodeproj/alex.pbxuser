@@ -1,0 +1,94 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* CabHere */ = {
+		activeExec = 0;
+		executables = (
+			FA45F3D70E06225900EEC337 /* CabHere */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* CabHereViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {566, 518}}";
+			sepNavSelRange = "{205, 0}";
+			sepNavVisRange = "{0, 798}";
+			sepNavWindowFrame = "{{856, 94}, {613, 637}}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* CabHereViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {738, 1554}}";
+			sepNavSelRange = "{2399, 13}";
+			sepNavVisRange = "{1874, 1039}";
+			sepNavWindowFrame = "{{1722, 308}, {613, 637}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = FA45F3D70E06225900EEC337 /* CabHere */;
+		activeSDKPreference = iphoneos2.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* CabHere */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* CabHere */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = FA45F3DE0E06227700EEC337 /* Code sense */;
+		executables = (
+			FA45F3D70E06225900EEC337 /* CabHere */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 235308216;
+			PBXWorkspaceStateSaveDate = 235308216;
+		};
+		sourceControlManager = FA45F3DD0E06227700EEC337 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32CA4F630368D1EE00C91783 /* CabHere_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {679, 812}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 175}";
+			sepNavWindowFrame = "{{15, 83}, {726, 940}}";
+		};
+	};
+	FA45F3D70E06225900EEC337 /* CabHere */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = CabHere;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	FA45F3DD0E06227700EEC337 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	FA45F3DE0E06227700EEC337 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
