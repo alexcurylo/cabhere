@@ -1,0 +1,164 @@
+<html>
+
+    <head>
+
+	    <title>Client Test</title>
+
+	    <style>
+
+		    body
+			{
+			    margin: 1in ;
+				font: normal 10pt Arial ;
+			}
+
+			input
+			{
+			    border: solid 1px #dddddd ;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+	    <iframe src="" name="output" style="border: solid 1px #eeeeee;float: right ; width: 6.5in; height: 6in ;"></iframe>
+
+	    <p>
+
+			[ <a href="cab.html">Cab Company</a> ]
+
+		</p>
+
+		<p> Request Cab<br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="request cab" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="text" name="address" value="111 W. Georgia St." />
+			    <input type="test" name="latitude" value="100.100" style="width: 50px;" />
+			    <input type="test" name="longitude" value="200.200" style="width: 50px;" />
+			    <input type="test" name="name" value="Justin" style="width: 70px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+		<p> Request Status<br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="request status" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="test" name="session_id" value="" style="width: 230px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+		<p> Cancel Cab<br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="cancel cab" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="test" name="session_id" value="" style="width: 230px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+		<p> Cab Arrived<br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="cab arrived" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="test" name="session_id" value="" style="width: 230px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+		<p> 
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="submit" name="action" value="get pending" />
+
+			</form>
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="submit" name="action" value="get dispatched" />
+
+			</form>
+
+		</p>
+
+		<p> 
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="submit" name="action" value="clear database" />
+
+			</form>
+
+		</p>
+
+		<p> Accept Referral <br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="accept" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="test" name="session_id" value="" style="width: 230px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+		<p> Reject Referral <br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="reject" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="test" name="session_id" value="" style="width: 230px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+		<p> Update Message <br />
+
+		    <form method="post" action="/cgi-bin/cabhere.cgi" target="output">
+
+			    <input type="hidden" name="action" value="update" />
+			    <input type="text" name="device_id" value="1234" style="width: 50px;" />
+			    <input type="test" name="session_id" value="" style="width: 230px;" />
+			    <input type="test" name="message" value="" style="width: 100px;" />
+
+				<input type="submit" value="send" />
+
+			</form>
+
+		</p>
+
+	</body>
+
+</html>
