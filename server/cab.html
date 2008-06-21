@@ -1,0 +1,249 @@
+<html>
+
+    <head>
+
+	    <style>
+
+		    body
+			{
+			    margin: 1in ;
+				font: normal 10pt Arial ;
+			}
+
+			div.right
+			{
+			    float: right ;
+				border: solid 1px #eeeeee ;
+				width: 48% ;
+				height: 6in ;
+				padding: 5px ;
+			}
+
+			div.left
+			{
+			    border: solid 1px #eeeeee ;
+				width: 48% ;
+				height: 6in ;
+				padding: 5px ;
+				margin-right: 10px ;
+			}
+			
+			div.pending
+			{
+			    border: solid 1px #eeeeee ;
+				padding: 2px ;
+				height: 18px ;
+				margin-bottom: 2px ;
+			}
+
+			div.dispatched
+			{
+			    border: solid 1px #eeeeee ;
+				padding: 2px ;
+				margin-bottom: 2px ;
+			}
+
+			div.update
+			{
+			    display: none ;
+			    margin-top: 2px ;
+			}
+
+			input
+			{
+			    border: solid 1px #999999 ;
+				text-transform: uppercase ;
+				font-size: 7pt ;
+				letter-spacing: 1px ;
+			}
+
+		</style>
+
+		<script>
+
+		    function init( )
+			{
+			    ajax( "action=get pending", displayPending ) ;
+			    ajax( "action=get dispatched", displayDispatched ) ;
+			}
+
+			function ajax( vars, callback )
+			{
+			    var request = new XMLHttpRequest( ) ;
+				request.open( "POST", "/cgi-bin/cabhere.cgi", true ) ;
+				request.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" ) ;
+				request.onreadystatechange = function( ) 
+				{
+				    if( request.readyState == 4 && request.status == 200 )
+					{
+					    if( request.responseText ) 
+						{
+						    callback( request.responseText ) ;
+						}
+					}
+				} ;
+				request.send( vars ) ;
+			}
+
+			function displayPending( data )
+			{
+			    var referrals = eval( data ) ;
+				var parent = document.getElementById( 'left' ) ;
+				for( ii = 0 ; ii < referrals.length ; ++ii )
+				{
+				    var referral = referrals[ ii ] ;
+				    var node = createPendingDiv( referral[ 0 ], referral[ 1 ], referral[ 2 ], referral[ 3 ], referral[ 4 ] ) ;
+					parent.appendChild( node ) ;
+				}
+			}
+
+			function displayDispatched( data )
+			{
+			    var referrals = eval( data ) ;
+				var parent = document.getElementById( 'right' ) ;
+				for( ii = 0 ; ii < referrals.length ; ++ii )
+				{
+				    var referral = referrals[ ii ] ;
+				    var node = createDispatchedDiv( referral[ 0 ], referral[ 1 ], referral[ 2 ], referral[ 3 ], referral[ 4 ], referral[ 5 ] ) ;
+					parent.appendChild( node ) ;
+				}
+			}
+
+			function acceptReferral( data )
+			{
+			    window.location.reload( ) ;
+			}
+
+			function createPendingDiv( sessionId, address, name, deviceId, timestamp )
+			{
+			    var node = document.createElement( "DIV" ) ;
+				node.setAttribute( "class", "pending" ) ;
+				node.setAttribute( "id", sessionId ) ;
+
+				var buttonNode = document.createElement( "DIV" ) ;
+				buttonNode.setAttribute( "style", "float:right" ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "type", "button" ) ;
+				temp.setAttribute( "value", "accept" ) ;
+				var click = "ajax( 'device_id=" + deviceId + "\&session_id=" + sessionId + "\&action=accept', acceptReferral )" ; 
+				temp.setAttribute( "onclick", click ) ;
+				buttonNode.appendChild( temp ) ;
+
+				buttonNode.appendChild( document.createTextNode( " " ) ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "type", "button" ) ;
+				temp.setAttribute( "value", "reject" ) ;
+				var click = "ajax( 'device_id=" + deviceId + "\&session_id=" + sessionId + "\&action=reject', acceptReferral )" ; 
+				temp.setAttribute( "onclick", click ) ;
+				buttonNode.appendChild( temp ) ;
+
+				node.appendChild( buttonNode ) ;
+
+				temp = document.createTextNode( timestamp + ' ' + address + ' (' + name + ')' ) ;
+				node.appendChild( temp ) ;
+
+				return node ;
+			}
+
+			function createDispatchedDiv( sessionId, address, name, deviceId, timestamp, message )
+			{
+			    var node = document.createElement( "DIV" ) ;
+				node.setAttribute( "class", "dispatched" ) ;
+				node.setAttribute( "id", sessionId ) ;
+
+				var buttonNode = document.createElement( "DIV" ) ;
+				buttonNode.setAttribute( "style", "float:right" ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "type", "button" ) ;
+				temp.setAttribute( "value", "arrived" ) ;
+				var click = "ajax( 'device_id=" + deviceId + "\&session_id=" + sessionId + "\&action=cab arrived', acceptReferral )" ; 
+				temp.setAttribute( "onclick", click ) ;
+				buttonNode.appendChild( temp ) ;
+
+				buttonNode.appendChild( document.createTextNode( " " ) ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "type", "button" ) ;
+				temp.setAttribute( "value", "update" ) ;
+				var click = "document.getElementById( '" + sessionId + "_update' ).style.display='block';" ; 
+				temp.setAttribute( "onclick", click ) ;
+				buttonNode.appendChild( temp ) ;
+
+				buttonNode.appendChild( document.createTextNode( " " ) ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "type", "button" ) ;
+				temp.setAttribute( "value", "no show" ) ;
+				var click = "ajax( 'device_id=" + deviceId + "\&session_id=" + sessionId + "\&action=no show', acceptReferral )" ; 
+				temp.setAttribute( "onclick", click ) ;
+				buttonNode.appendChild( temp ) ;
+
+				node.appendChild( buttonNode ) ;
+
+				temp = document.createTextNode( timestamp + ' ' + address + ' (' + name + ')' ) ;
+				node.appendChild( temp ) ;
+
+				node.appendChild( document.createElement( "BR" ) ) ;
+				temp = document.createTextNode( message ) ;
+				node.appendChild( temp ) ;
+				node.appendChild( document.createElement( "BR" ) ) ;
+				
+				var updateNode = document.createElement( "DIV" ) ;
+				updateNode.setAttribute( "class", "update" ) ;
+				updateNode.setAttribute( "id", sessionId + "_update" ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "style", "font: normal 9pt Arial; width: 2in ;text-transform:none;letter-spacing:0px;" ) ;
+				temp.setAttribute( "id", sessionId + "_input" ) ;
+				updateNode.appendChild( temp ) ;
+
+				updateNode.appendChild( document.createTextNode( " " ) ) ;
+
+				temp = document.createElement( "INPUT" ) ;
+				temp.setAttribute( "type", "button" ) ;
+				temp.setAttribute( "value", "send update" ) ;
+				click = "sendUpdate( '" + sessionId + "', '" + deviceId + "' ) ;" ;
+				temp.setAttribute( "onclick", click ) ;
+				updateNode.appendChild( temp ) ;
+
+				node.appendChild( updateNode ) ;
+
+				return node ;
+			}
+
+			function sendUpdate( sessionId, deviceId )
+			{
+			    var data = document.getElementById( sessionId + "_input" ) ;
+				var text = "action=update&device_id=" + deviceId + "&session_id=" + sessionId + "&message=" + data.value ;
+				ajax( text, acceptReferral ) ;
+			    document.getElementById( sessionId + "_update" ).style.display = 'none' ;
+			}
+
+			window.onload=init ;
+
+		</script>
+
+	</head>
+
+	<body>
+
+	    <p>
+
+		    [ <a href="client.html">Client Test</a> ]
+
+		</p>
+
+		<div class="right" id="right"> Dispatched<br /><br />
+
+		</div>
+
+		<div class="left" id="left"> Pending<br /><br />
+
+		</div>
+
+	</body>
+
+</html>
