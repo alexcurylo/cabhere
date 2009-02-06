@@ -7,36 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* CabHereAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CabHereAppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		2899E5220DE3E06400AC0155 /* CabHereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* CabHereViewController.xib */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* CabHereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CabHereViewController.m */; };
 		FA45F4780E06324B00EEC337 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45F4770E06324B00EEC337 /* CoreLocation.framework */; };
-		FAFB0BA30F3CE8BB00FB9ADC /* CabNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BA20F3CE8BB00FB9ADC /* CabNotes.rtf */; };
 		FAFB0BA90F3CE99100FB9ADC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BA70F3CE99100FB9ADC /* Default.png */; };
 		FAFB0BAA0F3CE99100FB9ADC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BA80F3CE99100FB9ADC /* Icon.png */; };
+		FAFB0BBB0F3CEAD000FB9ADC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BB80F3CEAD000FB9ADC /* MainWindow.xib */; };
+		FAFB0BBD0F3CEAD000FB9ADC /* CabHereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BBA0F3CEAD000FB9ADC /* CabHereViewController.xib */; };
+		FAFB0BC40F3CEAD700FB9ADC /* CabHereAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFB0BC00F3CEAD700FB9ADC /* CabHereAppDelegate.m */; };
+		FAFB0BC50F3CEAD700FB9ADC /* CabHereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFB0BC20F3CEAD700FB9ADC /* CabHereViewController.m */; };
+		FAFB0BC60F3CEAD700FB9ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFB0BC30F3CEAD700FB9ADC /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* CabHereAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabHereAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* CabHereAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabHereAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* CabHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* CabHereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CabHereViewController.xib; sourceTree = "<group>"; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28D7ACF60DDB3853001CB0EB /* CabHereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabHereViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* CabHereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabHereViewController.m; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* CabHere_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabHere_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA45F4770E06324B00EEC337 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FAFB0BA20F3CE8BB00FB9ADC /* CabNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = CabNotes.rtf; sourceTree = "<group>"; };
 		FAFB0BA70F3CE99100FB9ADC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FAFB0BA80F3CE99100FB9ADC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FAFB0BB70F3CEAC700FB9ADC /* CabHere_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabHere_Prefix.pch; sourceTree = "<group>"; };
+		FAFB0BB80F3CEAD000FB9ADC /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		FAFB0BB90F3CEAD000FB9ADC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFB0BBA0F3CEAD000FB9ADC /* CabHereViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CabHereViewController.xib; sourceTree = "<group>"; };
+		FAFB0BBF0F3CEAD700FB9ADC /* CabHereAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabHereAppDelegate.h; sourceTree = "<group>"; };
+		FAFB0BC00F3CEAD700FB9ADC /* CabHereAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabHereAppDelegate.m; sourceTree = "<group>"; };
+		FAFB0BC10F3CEAD700FB9ADC /* CabHereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabHereViewController.h; sourceTree = "<group>"; };
+		FAFB0BC20F3CEAD700FB9ADC /* CabHereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabHereViewController.m; sourceTree = "<group>"; };
+		FAFB0BC30F3CEAD700FB9ADC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +52,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1D3623240D0F684500981E51 /* CabHereAppDelegate.h */,
-				1D3623250D0F684500981E51 /* CabHereAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* CabHereViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* CabHereViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,33 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				FAFB0BA10F3CE8BB00FB9ADC /* notes */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				FAFB0BBE0F3CEAD700FB9ADC /* source */,
 				FAFB0BA60F3CE99100FB9ADC /* resources */,
+				FAFB0BB60F3CEAC700FB9ADC /* headers */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* CabHere_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2899E5210DE3E06400AC0155 /* CabHereViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -128,8 +96,31 @@
 			children = (
 				FAFB0BA70F3CE99100FB9ADC /* Default.png */,
 				FAFB0BA80F3CE99100FB9ADC /* Icon.png */,
+				FAFB0BB80F3CEAD000FB9ADC /* MainWindow.xib */,
+				FAFB0BB90F3CEAD000FB9ADC /* Info.plist */,
+				FAFB0BBA0F3CEAD000FB9ADC /* CabHereViewController.xib */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		FAFB0BB60F3CEAC700FB9ADC /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB0BB70F3CEAC700FB9ADC /* CabHere_Prefix.pch */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		FAFB0BBE0F3CEAD700FB9ADC /* source */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB0BBF0F3CEAD700FB9ADC /* CabHereAppDelegate.h */,
+				FAFB0BC00F3CEAD700FB9ADC /* CabHereAppDelegate.m */,
+				FAFB0BC10F3CEAD700FB9ADC /* CabHereViewController.h */,
+				FAFB0BC20F3CEAD700FB9ADC /* CabHereViewController.m */,
+				FAFB0BC30F3CEAD700FB9ADC /* main.m */,
+			);
+			path = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,11 +165,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				2899E5220DE3E06400AC0155 /* CabHereViewController.xib in Resources */,
-				FAFB0BA30F3CE8BB00FB9ADC /* CabNotes.rtf in Resources */,
 				FAFB0BA90F3CE99100FB9ADC /* Default.png in Resources */,
 				FAFB0BAA0F3CE99100FB9ADC /* Icon.png in Resources */,
+				FAFB0BBB0F3CEAD000FB9ADC /* MainWindow.xib in Resources */,
+				FAFB0BBD0F3CEAD000FB9ADC /* CabHereViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* CabHereAppDelegate.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* CabHereViewController.m in Sources */,
+				FAFB0BC40F3CEAD700FB9ADC /* CabHereAppDelegate.m in Sources */,
+				FAFB0BC50F3CEAD700FB9ADC /* CabHereViewController.m in Sources */,
+				FAFB0BC60F3CEAD700FB9ADC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +196,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CabHere_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				GCC_PREFIX_HEADER = headers/CabHere_Prefix.pch;
+				INFOPLIST_FILE = resources/Info.plist;
 				PRODUCT_NAME = CabHere;
 			};
 			name = Debug;
@@ -218,8 +208,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CabHere_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				GCC_PREFIX_HEADER = headers/CabHere_Prefix.pch;
+				INFOPLIST_FILE = resources/Info.plist;
 				PRODUCT_NAME = CabHere;
 			};
 			name = Release;
