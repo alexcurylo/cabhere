@@ -90,12 +90,12 @@
 	fromLocation:(CLLocation *)oldLocation
 {
    NSLog(@"location update: %@", [newLocation description]);
-   // location update: <+49.27802273, -123.12648783> +/- 161.12m @ 2008-06-16 04:59:35 -0700
-   // location update: <+49.27766418, -123.12731171> +/- 323.24m @ 2008-06-16 08:34:41 -0700
    _ibLocation.text = [newLocation description];
-
-// http://mlbs.net/nacgeoservicesv4.5/xmllocationinfo.aspx?UserID=1368084706&Longitude=-123.12731171&Latitude=49.27766418
 }
+// location update: <+49.27802273, -123.12648783> +/- 161.12m @ 2008-06-16 04:59:35 -0700
+// location update: <+49.27766418, -123.12731171> +/- 323.24m @ 2008-06-16 08:34:41 -0700
+// http://mlbs.net/nacgeoservicesv4.5/xmllocationinfo.aspx?UserID=1368084706&Longitude=-123.12731171&Latitude=49.27766418
+
 
 - (void)locationManager:(CLLocationManager *)manager
 	didFailWithError:(NSError *)error
