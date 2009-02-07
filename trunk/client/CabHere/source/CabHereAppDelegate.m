@@ -8,23 +8,24 @@
 
 #import "CabHereAppDelegate.h"
 #import "CabHereViewController.h"
+#import "WalkiesViewController.h"
 
 @implementation CabHereAppDelegate
 
 @synthesize window;
-@synthesize viewController;
-
+@synthesize cabViewController;
+@synthesize walkiesViewController;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {	
-   [window addSubview:viewController.view];
-   [window makeKeyAndVisible];
+   //[window addSubview:cabViewController.view];
+   [window addSubview:walkiesViewController.view];
 }
-
 
 - (void)dealloc
 {
-   [viewController release];
+   [cabViewController release];
+   [walkiesViewController release];
    [window release];
 
    [super dealloc];

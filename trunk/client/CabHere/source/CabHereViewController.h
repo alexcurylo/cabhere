@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface CabHereViewController : UIViewController<CLLocationManagerDelegate>
+@interface CabHereViewController : UIViewController <CLLocationManagerDelegate>
 {
    IBOutlet UILabel* _ibDevice;
    IBOutlet UILabel* _ibLocation;
@@ -26,11 +26,23 @@
    IBOutlet UIButton* _ibCabArrivedButton;
 }
 
+- (void)viewDidLoad;
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation;
+- (void)didReceiveMemoryWarning;
+- (void)dealloc;
+
+
 - (IBAction)cabHereButtonPressed:(id)sender;
-
 - (IBAction)cancelCabButtonPressed:(id)sender;
-
 - (IBAction)cabArrivedButtonPressed:(id)sender;
+
+// CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+	fromLocation:(CLLocation *)oldLocation;
+- (void)locationManager:(CLLocationManager *)manager
+	didFailWithError:(NSError *)error;
 
 @end
 

@@ -9,14 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @class CabHereViewController;
+@class WalkiesViewController;
 
-@interface CabHereAppDelegate : NSObject <UIApplicationDelegate> {
+@interface CabHereAppDelegate : NSObject <UIApplicationDelegate>
+{
 	IBOutlet UIWindow *window;
-	IBOutlet CabHereViewController *viewController;
+	IBOutlet CabHereViewController *cabViewController;
+	IBOutlet WalkiesViewController *walkiesViewController;
 }
 
 @property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) CabHereViewController *viewController;
+@property (nonatomic, retain) CabHereViewController *cabViewController;
+@property (nonatomic, retain) WalkiesViewController *walkiesViewController;
 
 @end
 
