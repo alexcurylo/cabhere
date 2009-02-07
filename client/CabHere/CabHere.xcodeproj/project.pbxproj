@@ -10,6 +10,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		FA45F4780E06324B00EEC337 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45F4770E06324B00EEC337 /* CoreLocation.framework */; };
+		FA906AF60F3D176A00F49F6C /* WalkiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA906AF50F3D176A00F49F6C /* WalkiesViewController.m */; };
+		FA906B0F0F3D1E7A00F49F6C /* Walkies.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA906B0E0F3D1E7A00F49F6C /* Walkies.xib */; };
 		FAFB0BA90F3CE99100FB9ADC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BA70F3CE99100FB9ADC /* Default.png */; };
 		FAFB0BAA0F3CE99100FB9ADC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BA80F3CE99100FB9ADC /* Icon.png */; };
 		FAFB0BBB0F3CEAD000FB9ADC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFB0BB80F3CEAD000FB9ADC /* MainWindow.xib */; };
@@ -24,6 +26,9 @@
 		1D6058910D05DD3D006BFB54 /* CabHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA45F4770E06324B00EEC337 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FA906AF40F3D176A00F49F6C /* WalkiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkiesViewController.h; sourceTree = "<group>"; };
+		FA906AF50F3D176A00F49F6C /* WalkiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkiesViewController.m; sourceTree = "<group>"; };
+		FA906B0E0F3D1E7A00F49F6C /* Walkies.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Walkies.xib; sourceTree = "<group>"; };
 		FAFB0BA20F3CE8BB00FB9ADC /* CabNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = CabNotes.rtf; sourceTree = "<group>"; };
 		FAFB0BA70F3CE99100FB9ADC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FAFB0BA80F3CE99100FB9ADC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -94,11 +99,12 @@
 		FAFB0BA60F3CE99100FB9ADC /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAFB0BB80F3CEAD000FB9ADC /* MainWindow.xib */,
+				FAFB0BBA0F3CEAD000FB9ADC /* CabHereViewController.xib */,
+				FA906B0E0F3D1E7A00F49F6C /* Walkies.xib */,
+				FAFB0BB90F3CEAD000FB9ADC /* Info.plist */,
 				FAFB0BA70F3CE99100FB9ADC /* Default.png */,
 				FAFB0BA80F3CE99100FB9ADC /* Icon.png */,
-				FAFB0BB80F3CEAD000FB9ADC /* MainWindow.xib */,
-				FAFB0BB90F3CEAD000FB9ADC /* Info.plist */,
-				FAFB0BBA0F3CEAD000FB9ADC /* CabHereViewController.xib */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -118,6 +124,8 @@
 				FAFB0BC00F3CEAD700FB9ADC /* CabHereAppDelegate.m */,
 				FAFB0BC10F3CEAD700FB9ADC /* CabHereViewController.h */,
 				FAFB0BC20F3CEAD700FB9ADC /* CabHereViewController.m */,
+				FA906AF40F3D176A00F49F6C /* WalkiesViewController.h */,
+				FA906AF50F3D176A00F49F6C /* WalkiesViewController.m */,
 				FAFB0BC30F3CEAD700FB9ADC /* main.m */,
 			);
 			path = source;
@@ -169,6 +177,7 @@
 				FAFB0BAA0F3CE99100FB9ADC /* Icon.png in Resources */,
 				FAFB0BBB0F3CEAD000FB9ADC /* MainWindow.xib in Resources */,
 				FAFB0BBD0F3CEAD000FB9ADC /* CabHereViewController.xib in Resources */,
+				FA906B0F0F3D1E7A00F49F6C /* Walkies.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +191,7 @@
 				FAFB0BC40F3CEAD700FB9ADC /* CabHereAppDelegate.m in Sources */,
 				FAFB0BC50F3CEAD700FB9ADC /* CabHereViewController.m in Sources */,
 				FAFB0BC60F3CEAD700FB9ADC /* main.m in Sources */,
+				FA906AF60F3D176A00F49F6C /* WalkiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
